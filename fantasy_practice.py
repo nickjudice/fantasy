@@ -60,7 +60,7 @@ def get_season(year_):
   #merge and add to draft order
   league_his = avg_scores.merge(w1_tot, left_on='Team ID', right_on='Team')
   
-  r = requests.get(url, params={"view"; "mSettings"})
+  r = requests.get(url, params={"view": "mSettings"})
   settings = r.json()[0]
   
   l = settings['settings']['draftSettings']['pickOrder']
