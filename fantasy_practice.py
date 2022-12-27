@@ -50,7 +50,7 @@ def get_season(year_):
   for i in df['Team1'].unique():
   
       x = (df[(df['Team1']==i)]['Score1'].sum() + df[(df['Team2']==i)]['Score2'].sum())#/len(df['Week'].unique())
-      y = (df[(df['Team1']==i)]['Score2'].sum() + df[(df['Team2']==i)]['Score1'].sum())/#len(df['Week'].unique())
+      y = (df[(df['Team1']==i)]['Score2'].sum() + df[(df['Team2']==i)]['Score1'].sum())#/len(df['Week'].unique())
       tm.append(i)
       score.append(round(x,2))
       against.append(round(y,2))
