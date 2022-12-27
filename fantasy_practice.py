@@ -77,7 +77,7 @@ def get_season(year_):
 
 get_season(2022).fillna(0)
                                 
-#years = np.arrane(2021,2022)
+#years = np.arrange(2021,2022)
 #league_his_tot = get_season(2021)
 #num_years = len(years)
                                 
