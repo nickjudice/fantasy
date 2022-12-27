@@ -27,7 +27,7 @@ def get_season(year_):
         game['home']['teamId'], game['home']['totalPoints'],
         game['away']['teamId'], game['away']['totalPoints']
       ] for game in d['schedule']]
-  df = pd.DataFrame(df, columns=['Week', 'Team1', 'Score1', 'Team2', Score2'])
+  df = pd.DataFrame(df, columns=['Week', 'Team1', 'Score1', 'Team2', 'Score2'])
   
   #calculate margins and wins
   df3 = df.assign(Margin1 = df['Score1'] - df['Score2'],
