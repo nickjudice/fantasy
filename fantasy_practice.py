@@ -15,8 +15,7 @@ def get_season(year_):
   #api
   league_id = 124582
   year = year_
-  url = "https://fantasy.espn.com/apis/v3/games/ffl/leagueHistory/" + \
-        str(league_id) + "?seasonId=" + str(year)
+  url = "https://fantasy.espn.com/apis/v3/games/ffl/leagueHistory/" + str(league_id) + "?seasonId=" + str(year)
         
   r = requests.get(url, params={"view": "mMatchup"})
   d = r.json()[0]
@@ -77,8 +76,8 @@ def get_season(year_):
 
 #get_season(2022).fillna(0)
                                 
-years = np.arange(2021,2022)
-league_his_tot = get_season(2021)
+years = np.arange(2012,2022)
+league_his_tot = get_season(2011)
 num_years = len(years)
                                 
 for i in years:
