@@ -24,7 +24,7 @@ def get_season(year_):
   df = [[
         game['matchupPeriodId'],
         game['home']['teamId'], game['home']['totalPoints'],
-        game['Away']['teamId'], game['Away']['totalPoints']
+        game['away']['teamId'], game['away']['totalPoints']
       ] for game in d['schedule']]
   df = pd.DataFrame(df, columns=['Week', 'Team1', 'Score1', 'Team2', 'Score2'])
   
@@ -76,8 +76,8 @@ def get_season(year_):
 
 #get_season(2022).fillna(0)
                                 
-years = np.arange(2012,2022)
-league_his_tot = get_season(2011)
+years = np.arange(2020,2021)
+league_his_tot = get_season(2019)
 num_years = len(years)
                                 
 for i in years:
