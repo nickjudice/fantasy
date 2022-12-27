@@ -74,7 +74,7 @@ def get_season(year_):
   else:
     return league_his[['Team ID', 'W', 'L', 'Points For', 'Points Allowed', 'Pick Number', 'Year']].sort_values(by='W', ascending=False)
 
-get_season(2021)
+get_season(2016)
                                 
 #years = np.arange(2020,2021)
 #league_his_tot = get_season(2019)
