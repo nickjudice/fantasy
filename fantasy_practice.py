@@ -74,20 +74,20 @@ def get_season(year_):
   else:
     return league_his[['Team ID', 'W', 'L', 'Points For', 'Points Allowed', 'Pick Number', 'Year']].sort_values(by='W', ascending=False)
 
-#get_season(2022).fillna(0)
+get_season(2021).fillna(0)
                                 
-years = np.arange(2020,2021)
-league_his_tot = get_season(2019)
-num_years = len(years)
+#years = np.arange(2020,2021)
+#league_his_tot = get_season(2019)
+#num_years = len(years)
                                 
-for i in years:
-    league_his_tot = pd.concat([league_hit_tot, get_season(i)], axis=0, ignore_index=True)
-league_his_tot['Tie']=league_his_tot['Tie'].fillna(0)
-                                
-totals = league_his_tot.groupby('Team ID').sum().reset_index()
+#for i in years:
+ #   league_his_tot = pd.concat([league_hit_tot, get_season(i)], axis=0, ignore_index=True)
+#league_his_tot['Tie']=league_his_tot['Tie'].fillna(0)
+                               
+#totals = league_his_tot.groupby('Team ID').sum().reset_index()
 
-totals['Points For Total'] = round(totals['Points For'],2)
-totals['Points Allowed Total'] = round(totals['Points Allowed'],2)
+#totals['Points For Total'] = round(totals['Points For'],2)
+#totals['Points Allowed Total'] = round(totals['Points Allowed'],2)
                                 
-totals = totals.drop(['Year', 'Pick Number', 'Points For'], axis=1)
-totals[['Team ID', 'W', 'L', 'Tie', 'Points For Total', 'Points Allowed Total']].sort_values(by='W', ascending=False)                               
+#totals = totals.drop(['Year', 'Pick Number', 'Points For'], axis=1)
+#totals[['Team ID', 'W', 'L', 'Tie', 'Points For Total', 'Points Allowed Total']].sort_values(by='W', ascending=False)                               
