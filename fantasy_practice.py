@@ -13,7 +13,7 @@ def winner(x):
 def get_season(year_):
 
   #api
-  league_id =
+  league_id = 124582
   year = year_
   url = "https://fantasy.espn.com/apis/v3/games/ffl/leagueHistory/" + \
         str(league_id) + "?seasonId=" + str(year)
@@ -74,3 +74,5 @@ def get_season(year_):
     return league_his[['Team ID', 'W', 'L', 'Tie', 'Points For', 'Points Allowed', 'Pick Number', 'Year']].sort_values(by='W', ascending=False)
   else:
     return league_his[['Team ID', 'W', 'L', 'Points For', 'Points Allowed', 'Pick Number', 'Year']].sort_values(by='W', ascending=False)
+
+get_season(2022).fillna(0)
