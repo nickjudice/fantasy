@@ -25,7 +25,7 @@ def get_season(year_):
   df = [[
         game['matchupPeriodId'],
         game['home']['teamId'], game['home']['totalPoints'],
-        game['away']['teamId'], game['away]['totalPoints']
+        game['away']['teamId'], game['away']['totalPoints']
       ] for game in d['schedule']]
   df = pd.DataFrame(df, columns=['Week', 'Team1', 'Score1', 'Team2', Score2'])
   
